@@ -2,8 +2,7 @@ version: 2.1
 
 jobs:
   build:
-    docker:
-      - image: circleci/ruby:2.3.4-node
+    machine: true
     steps:
       - run:
           name: Check Python

@@ -1,4 +1,4 @@
-# Test circleci/ruby image's Python version
+# Test CircleCI machine Python version
 
 
-This is to check on (legacy) circleci/ruby Docker image's pre-installed Python version.
+This is to check on Machine builds' pre-installed Python version.
