@@ -14,7 +14,7 @@ jobs:
             pip install --upgrade awscli
             # downgrade rsa
             pip uninstall -y rsa
-            pip install -v rsa==4.3
+            pip install rsa==4.3
       - run:
           name: Confirm package version
           command: |
