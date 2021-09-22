@@ -12,6 +12,11 @@ jobs:
           command: |
             pip install futures
             pip install --upgrade awscli
+      - run:
+          name: Confirm package version
+          command: |
+            pip show awscli
+            pip show rsa
 
 workflows:
   main:
