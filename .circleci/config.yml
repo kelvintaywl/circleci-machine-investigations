@@ -5,6 +5,12 @@ jobs:
     machine: true
     steps:
       - run:
+          name: Check FUSE
+          command: |
+            # https://stackoverflow.com/questions/16991414/which-fuse-version-in-my-kernel
+            fusermount -V
+            dpkg --get-selections | grep fuse
+      - run:
           name: Check Python
           command: python --version
       - run:
