@@ -15,6 +15,7 @@ jobs:
           nvm install v15.11.0
           node -v
           nvm alias default v15.11.0
+          echo 'export PATH=$PATH' >> $BASH_ENV
       - run: |
           node -v
   build:
