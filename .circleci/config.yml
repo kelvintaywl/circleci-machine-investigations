@@ -7,14 +7,13 @@ jobs:
     steps:
       - run: |
             echo 'export NVM_DIR="/opt/circleci/.nvm"' >> $BASH_ENV
-            echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $BASH_ENV
+            echo '[ -s "$NVM_DIR/nvm.sh" ] && source $NVM_DIR/nvm.sh' >> $BASH_ENV
       - run: |
           node -v
       - run: |
           nvm install v15.11.0
           node -v
           nvm alias default v15.11.0
-          echo 'nvm alias default v15.11.0' >> $BASH_ENV
       - run: |
           node -v
   build:
