@@ -8,6 +8,7 @@ jobs:
       - run: |
             echo 'export NVM_DIR="/opt/circleci/.nvm"' >> $BASH_ENV
             echo '[ -s "$NVM_DIR/nvm.sh" ] && source $NVM_DIR/nvm.sh' >> $BASH_ENV
+            echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> $BASH_ENV
       - run: |
           node -v
       - run: |
