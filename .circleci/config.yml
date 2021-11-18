@@ -17,7 +17,9 @@ jobs:
           nvm alias default v15.11.0
           printenv PATH
           echo 'export PATH="${PATH}:/home/circleci/.yarn/bin"' >> $BASH_ENV
+          cat $BASH_ENV
       - run: |
+          cat $BASH_ENV
           printenv PATH
           node -v
   build:
