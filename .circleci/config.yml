@@ -1,12 +1,9 @@
 version: 2.1
 
-orbs:
-  android: circleci/android@1.0.3
-
 jobs:
   set_nvm:
-    executor:
-      name: android/android-machine
+    machine:
+      image: android:202102-01
     steps:
       - run: |
             echo 'export NVM_DIR="/opt/circleci/.nvm"' >> $BASH_ENV
