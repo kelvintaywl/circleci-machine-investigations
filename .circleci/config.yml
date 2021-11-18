@@ -2,7 +2,8 @@ version: 2.1
 
 jobs:
   set_nvm:
-    machine: ubuntu-2004:202101-01
+    machine:
+      image: ubuntu-2004:202101-01
     steps:
       - run: |
             echo 'export NVM_DIR="/opt/circleci/.nvm"' >> $BASH_ENV
