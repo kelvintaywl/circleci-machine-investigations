@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   set_nvm:
     machine:
-      image: android:202102-01
+      image: android:202110-01
     steps:
       - run: |
             echo 'export NVM_DIR="/opt/circleci/.nvm"' >> $BASH_ENV
