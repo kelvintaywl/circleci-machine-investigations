@@ -21,6 +21,7 @@ jobs:
       - run: |
           cat $BASH_ENV
           printenv PATH
+          nvm current
           node -v
   build:
     machine:
