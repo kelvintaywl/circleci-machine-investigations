@@ -13,7 +13,7 @@ jobs:
       - run: |
           nvm install v15.11.0
           node -v
-          sudo -u circleci nvm alias default v15.11.0
+          sudo -Hi nvm alias default v15.11.0
       - run: |
           node -v
   build:
