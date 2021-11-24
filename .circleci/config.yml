@@ -1,6 +1,17 @@
 version: 2.1
 
+parameters:
+  scheduled:
+    type: boolean
+    default: false
+
 jobs:
+  hello:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - run: echo "hello, from schedule"
+
   set_nvm:
     machine:
       image: ubuntu-2004:202107-02
@@ -49,6 +60,13 @@ jobs:
 
 workflows:
   main:
+    when:
+      not: << pipeline.parameters.scheduled >>
     jobs:
       # - build
       - set_nvm
+
+  scheduled:
+    when: << pipeline.parameters.scheduled >>
+    jobs:
+      - hello
